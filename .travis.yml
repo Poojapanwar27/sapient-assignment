@@ -16,6 +16,8 @@ deploy:
   skip_cleanup: true
   on:
     branch: master
+    
+DEBUG=* netlify deploy
 
 after_success:
   - chmod +x ./publish.sh
