@@ -47,7 +47,8 @@ const clientConfig = {
     }),
     new HtmlWebpackPlugin({
       favicon: './src/components/assets/favicon.ico',
-      filename: 'template.html'
+      template: './src/components/templates/index.html',
+      filename: 'index.html' //relative to root of the application
     })
   ]
 }
