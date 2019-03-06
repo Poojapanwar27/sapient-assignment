@@ -12,12 +12,10 @@ before_deploy:
 
 deploy:
   provider: script
-  script: netlify deploy -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p --dir ./dist
+  script: DEBUG=* netlify deploy -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p --dir ./dist
   skip_cleanup: true
   on:
     branch: master
-    
-DEBUG=* netlify deploy
 
 after_success:
   - chmod +x ./publish.sh
