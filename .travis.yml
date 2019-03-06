@@ -13,7 +13,7 @@ before_deploy:
 
 deploy:
   provider: script
-  script: DEBUG=* netlify deploy -s $NETLIFY_SITE_ID -t $NETLIFY_PUBLISH_KEY -p --dir ./dist
+  script: DEBUG=* netlify deploy -s $NETLIFY_SITE_ID -a $NETLIFY_PUBLISH_KEY -p --dir ./dist
   skip_cleanup: true
   on:
     branch: master
