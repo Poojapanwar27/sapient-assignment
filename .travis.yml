@@ -1,15 +1,24 @@
 language: node_js
-node_js:
-  - "stable"
+node_js: node
 cache:
   directories:
     - node_modules
 script:
+  - npm test
+env:
+  - CI=true
+
+before_deploy:
+  - npm install netlify-cli -g
   - npm run build
+
 deploy:
-  provider: surge
+  provider: script
+  script: netlify deploy -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p ./build
   skip_cleanup: true
-  domain: <my_name_here>.surge.sh
-  project: ./build/
-on:
-  branch: master
+  on:
+    branch: master
+
+ after_success:
+  - chmod +x ./publish.sh
+  - ./publish.sh
