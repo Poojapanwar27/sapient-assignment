@@ -7,8 +7,7 @@
     "client": "webpack -w --mode=production",
     "server": "nodemon dist/index.js",
     "start": "run-p -sn client server",
-    "build": "webpack -p",
-    "test": "jest --coverage"
+    "build": "webpack -p"
   },
   "author": "",
   "license": "ISC",
