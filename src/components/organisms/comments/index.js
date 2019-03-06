@@ -46,12 +46,18 @@ class Comments extends PureComponent {
     }
 
     render() {
-        const {articles, storedIds, upVotes} = this.props;       
+        const {articles, storedIds, upVotes} = this.props;
+        let RenderComment;     
         if (articles) {
             if (upVotes && upVotes.indexOf(parseInt(articles.id)) !== -1) {
                 articles.updatedPoints = articles.points + 1;
             }
-            const RenderComment = (storedIds && storedIds.indexOf(parseInt(articles.id)) === -1) ? <CommentsItem data={articles}/> : '';
+            
+            if (storedIds) {
+                RenderComment = (storedIds.indexOf(parseInt(articles.id)) === -1) ? <CommentsItem data={articles}/> : '';
+            } else {
+                RenderComment = <CommentsItem data={articles}/>;
+            }
 
             return(
                 <div className="comments">

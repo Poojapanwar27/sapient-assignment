@@ -7,7 +7,6 @@ import createSagaMiddleware from 'redux-saga';
 import {devToolsEnhancer} from 'redux-devtools-extension';
 
 import App from './components/pages';
-import registerServiceWorker from './registerServiceWorker';
 import rootReducer from './reducers';
 import Saga from './sagas';
 
@@ -34,7 +33,5 @@ ReactDOM.hydrate(
     </Provider>,
     document.getElementById('root')
 )
-
-registerServiceWorker();
 
 

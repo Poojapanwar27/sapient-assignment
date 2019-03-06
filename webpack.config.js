@@ -4,8 +4,10 @@ const path = require('path'),
       nodeExternals = require('webpack-node-externals'),
       ExtractTextPlugin = require('extract-text-webpack-plugin'),
       StyleLintPlugin = require('stylelint-webpack-plugin'),
-      UglifyJsPlugin = require('uglifyjs-webpack-plugin'),
-      rulesConfig = require('./rules-config');
+      UglifyJsPlugin = require('uglifyjs-webpack-plugin'),     
+      HtmlWebpackPlugin = require('html-webpack-plugin'),
+      rulesConfig = require('./rules-config'),
+      PUBLIC_URL = 'dist';
 
 const clientConfig = {
   entry: {
@@ -27,6 +29,9 @@ const clientConfig = {
       })
     ]
   },
+  performance: {
+    hints: false
+  },
   devServer: {
     open: true,
     //hot: true
@@ -39,6 +44,10 @@ const clientConfig = {
     new ExtractTextPlugin('style.css'),
     new webpack.DefinePlugin({
       __isBrowser__: "true"
+    }),
+    new HtmlWebpackPlugin({
+      favicon: './src/components/assets/favicon.ico',
+      filename: 'template.html'
     })
   ]
 }
