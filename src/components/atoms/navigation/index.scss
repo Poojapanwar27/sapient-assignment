@@ -1,0 +1,13 @@
+@import '../../_settings/_variable.scss';
+.topnav {
+    display: inline-flex;
+    &__item {
+        padding: 3px 5px;
+    }
+    &__link {
+        color: $body;
+        &_active {
+            color: $base;
+        }
+    }
+}

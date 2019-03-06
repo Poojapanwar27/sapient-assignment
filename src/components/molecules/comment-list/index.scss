@@ -1,0 +1,26 @@
+@import '../../_settings/_variable.scss';
+
+.comments-list {
+    background: $base;
+    margin: 1%;
+    width: 98%;
+    &__item {
+        &:nth-child(even) {
+            background: $ternary-color;
+        }
+        padding: 20px;
+    }
+    &__header {
+        display: inline;
+    }
+    .col {
+        padding: 1px;
+    }
+   
+    a {
+        color: $body;
+    }
+    .collapse {
+        display: none;
+    }
+}

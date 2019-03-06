@@ -1,0 +1,38 @@
+@import '../../_settings/_variable';
+.comments {
+    background: $secondary-color;
+    color: $link-color;
+    
+    ul {
+        margin: 20px 0 20px 10px;
+    }
+    .col {
+        padding: 0 5px;
+        display: inline-flex;
+        vertical-align: middle;
+        position: relative;
+    }
+    .col-border {
+        border-left: solid 1px;
+    }
+    &__header {
+        &.col {
+            display: flex;
+        }
+        span {
+            padding: 3px;
+        }
+    }
+    .feeds__upvotes {
+        position: relative;
+        min-width: 0;
+        padding: 0;
+        &:after {
+            right: auto;
+            left: -15px;
+        }
+    }
+    a {
+        color: $body;
+    }
+}

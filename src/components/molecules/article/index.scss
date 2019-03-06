@@ -1,0 +1,54 @@
+@import '../../_settings/_variable';
+.feeds {
+    background: $secondary-color;
+    color: $link-color;
+
+    &__item {
+        display: flex;
+        padding: 10px 5px;
+        .col {
+            padding: 0 5px;
+            display: inline-flex;
+            vertical-align: middle;
+            position: relative;
+        }
+        &:nth-child(even) {
+            background: $ternary-color;
+        }
+        a {
+            color: $body;
+        }
+    }
+    &__title {
+        margin:0;
+        padding:0;
+        font-size: $heading-2;
+        font-weight: 300;
+    }
+    &__comments {
+        min-width: 60px;
+        justify-content: flex-end;
+    }
+    &__upvotes {
+        min-width: 40px;
+        text-align:right;
+        padding-right: 15px;
+        cursor: pointer;
+        &:after {
+            content: "";
+            display: block;
+            width: 0; 
+            height: 0; 
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 6px solid $link-color;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+        &.voted:after {
+            border-bottom: 6px solid $link-color;
+            border-top:0;
+        }    
+    }
+}

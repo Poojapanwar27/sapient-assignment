@@ -1,0 +1,27 @@
+@import '../../_settings/variable.scss';
+.btn {
+    margin: 15px;
+    font-size: $heading-3;
+    cursor: pointer;
+    &--primary {
+        background: $brand;
+        color: $base;
+        padding: 5px 10px;
+        border: solid 1px $ternary-color;
+        font-size: $base-font-size;
+    }
+    &--secondary {        
+        margin-left: 140px;
+        background: none;
+        border: none;
+        color: $brand;
+    }
+    &--ternary {
+        background: none;
+        border: none;
+        color: $body;
+        margin: 0;
+        padding: 0;
+        font-size: inherit;
+    }
+}

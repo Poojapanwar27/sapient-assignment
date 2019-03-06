@@ -1,0 +1,7 @@
+@import '../../_settings/_base.scss';
+.logo {
+    width: 30px;
+    img {
+        border: solid 1px $base;
+    }
+}

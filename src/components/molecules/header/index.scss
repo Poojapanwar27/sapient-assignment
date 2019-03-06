@@ -1,0 +1,7 @@
+@import '../../_settings/_variable.scss';
+
+.header {
+    padding: $basePadding;
+    background: $brand;
+    display: flex;
+}
