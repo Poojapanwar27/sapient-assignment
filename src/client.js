@@ -5,6 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import {createStore, applyMiddleware, compose} from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import {devToolsEnhancer} from 'redux-devtools-extension';
+import {createBrowserHistory} from 'history';
 
 import App from './components/pages';
 import rootReducer from './reducers';
@@ -27,7 +28,7 @@ sagaMiddleware.run(Saga);
 
 ReactDOM.hydrate(
     <Provider store={store}>
-        <BrowserRouter>
+        <BrowserRouter history={createBrowserHistory()}>
             <App />
         </BrowserRouter>
     </Provider>,

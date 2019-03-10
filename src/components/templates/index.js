@@ -7,13 +7,14 @@
 
 const template = (title, initialState = {}, content = '') => `
   <!DOCTYPE html>
-  <html>
+  <html lang="en">
     <head>
       <title>${title}</title>
       <link rel="shortcut icon" href="/favicon.ico" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <!-- Latest compiled and minified CSS -->
-      
+      <meta name="description" content="Hacker's News"/>
+
+      <!-- Latest compiled and minified CSS -->      
       <link rel="stylesheet" href="/style.css" type="text/css"/>
 
       <script>
