@@ -14,15 +14,15 @@ const prepareResoponse = (req, res) => {
 }
 
 // server rendered home page
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
     prepareResoponse(req, res);
 });
-/*app.get('/recent-feeds', (req, res) => {
+app.get('/recent-feeds', (req, res) => {
     prepareResoponse(req, res);
 });
 app.get('/item_:id', (req, res) => {
     prepareResoponse(req, res);
-});*/
+});
 
 app.listen(port);
 console.log(`Serving at http://localhost:${port}`);

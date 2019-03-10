@@ -14,7 +14,7 @@ const App = props => {
                 <Route exact path="/" component={Home} />
                 <Route path="/recent-feeds" component={RecentFeeds} />
                 <Route path="/item_:id" component={AddComments} />
-                <Route path="*" component={NotFound} />
+                <Route path="*" component={Home} />
             </Switch>
         </div>
     )
